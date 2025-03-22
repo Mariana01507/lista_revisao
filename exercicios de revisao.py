@@ -66,8 +66,37 @@ def fahrenheit_para_celsius(fahrenheit):
 #
 # Quantidade de latas: 1, Quantidade de galões: 1
 # Preço total: R$ 105.00
-def calcular_tinta():
-    pass
+import math
+def calcular_tinta(area):
+
+    
+    cobertura_litro = 6  
+    folga = 0.1  
+    litro_por_lata = 18  
+    litro_por_galao = 3.6  
+    preco_lata = 80.00  
+    preco_galao = 25.00 
+    
+    
+    area_com_folga = area * (1 + folga)  
+    litros_necessarios = area_com_folga / cobertura_litro
+    
+    latas_necessarias = math.ceil(litros_necessarios / litro_por_lata)
+    preco_latas = latas_necessarias * preco_lata
+    
+   
+    galoes_necessarios = math.ceil(litros_necessarios / litro_por_galao)
+    preco_galoes = galoes_necessarios * preco_galao
+    
+   
+    latas_mistura = math.floor(litros_necessarios / litro_por_lata)
+    litros_restantes = litros_necessarios - (latas_mistura * litro_por_lata)
+    galoes_mistura = math.ceil(litros_restantes / litro_por_galao)
+    preco_mistura = (latas_mistura * preco_lata) + (galoes_mistura * preco_galao)
+    
+    
+    return (latas_necessarias, preco_latas), (galoes_necessarios, preco_galoes), (latas_mistura, galoes_mistura, preco_mistura)
+
 
 # 6. Faça uma função que receba dois números e retorne o maior deles.
 def maior_numero():
