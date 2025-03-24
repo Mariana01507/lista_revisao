@@ -100,15 +100,45 @@ def calcular_tinta(area):
 
 # 6. Faça uma função que receba dois números e retorne o maior deles.
 def maior_numero():
-    pass
+    valor1 = int(input("Digite o primeiro valor:"))
+    valor2 = int(input("Digite o segundo valor:"))
+    
+    if valor1 > valor2:
+            print("O maior valor será:" (valor1))
+    else:
+            print("O maior valor será:"(valor2))
+         
 
 # 7. Faça uma função que verifique se uma letra é vogal ou consoante.
 def verificar_letra():
-    pass
+    letra = imput("Digite uma letra:")
+    if letra == a
+        print("A letra é uma vogal")
+    if letra == e
+        print("A letra é uma vogal")
+    if letra == i
+        print("A letra é uma vogal")
+    if letra == o
+        print("A letra é uma vogal")
+    if letra == u
+        print("A letra é uma vogal")
+    
+    else:
+        print("A letra é uma consoante!")
 
 # 8. Faça um Programa que receba três números e retorne o maior deles.
-def maior_tres_numeros():
-    pass
+def maior_tres_numeros(a, b, c):
+    
+    
+    return max(a, b, c)
+
+
+numero1 = 2
+numero2 = 86
+numero3 = 78
+
+maior = maior_numero(numero1, numero2, numero3)
+print(f"O maior número é: {maior}")
 
 # 9. Faça uma função que retorne o menor valor entre três numeros informados.
 def produto_mais_barato():
