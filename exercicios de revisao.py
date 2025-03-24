@@ -141,12 +141,12 @@ maior = maior_numero(numero1, numero2, numero3)
 print(f"O maior número é: {maior}")
 
 # 9. Faça uma função que retorne o menor valor entre três numeros informados.
-def produto_mais_barato():
+def produto_mais_barato(a,b,c):
     
     return min(a, b, c)
 
 
-numero1 = 2
+numero1 = 
 numero2 = 86
 numero3 = 78
 
