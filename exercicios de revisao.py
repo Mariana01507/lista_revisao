@@ -142,7 +142,16 @@ print(f"O maior número é: {maior}")
 
 # 9. Faça uma função que retorne o menor valor entre três numeros informados.
 def produto_mais_barato():
-    pass
+    
+    return min(a, b, c)
+
+
+numero1 = 2
+numero2 = 86
+numero3 = 78
+
+menor= menor_numero(numero1, numero2, numero3)
+print(f"O menor número é: {menor}")
 
 # 10. Faça uma funçao que retorne uma saudação com base no turno de estudo.
 # A entrada deverá ser M-matutino ou V-Vespertino ou N- Noturno. 
