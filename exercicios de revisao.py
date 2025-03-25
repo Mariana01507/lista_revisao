@@ -255,8 +255,38 @@ classificar_participacao()
 # carne comprada pelo usuário e gere um cupom fiscal, contendo as informações da compra: tipo e quantidade de
 # carne, preço total, tipo de pagamento, valor do desconto e valor a pagar.
 
-def calcular_preco_carne():
-    pass
+def calcular_preco_carne(tipo_carne, quantidade_kg, pagamento_com_cartao):
+    
+    if tipo_carne == "File Duplo":
+        preco_kg = 4.90 if quantidade_kg <= 5 else 5.80
+    elif tipo_carne == "Alcatra":
+        preco_kg = 5.90 if quantidade_kg <= 5 else 6.80
+    elif tipo_carne == "Picanha":
+        preco_kg = 6.90 if quantidade_kg <= 5 else 7.80
+
+    
+    total = preco_kg * quantidade_kg
+
+    
+    if pagamento_com_cartao:
+        desconto = total * 0.05
+        total -= desconto
+    else:
+        desconto = 0
+
+    
+    print("Tipo de carne:", tipo_carne)
+    print("Quantidade:", quantidade_kg, "Kg")
+    print("Preço total: R$", round(total, 2))
+    print("Desconto: R$", round(desconto, 2) if pagamento_com_cartao else 0)
+    print("Total a pagar: R$", round(total, 2))
+
+
+tipo_carne = input("Digite o tipo de carne (File Duplo, Alcatra ou Picanha): ")
+quantidade_kg = float(input("Digite a quantidade de carne em Kg: "))
+pagamento_com_cartao = input("Pagamento no Cartão Tabajara? (sim/não): ").strip().lower() == "sim"
+
+calcular_preco_carne(tipo_carne, quantidade_kg, pagamento_com_cartao)
 
 # 14. Faça um programa que peça dois números, base e expoente, calcule e mostre o primeiro número elevado ao segundo número. 
 # Não utilize a função de potência da linguagem.
