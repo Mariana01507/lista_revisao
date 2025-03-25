@@ -479,7 +479,17 @@ calcular_media_ginastica()
 
 # 21. Faça um Programa que desenhe uma pirâmide alinhada à esquerda.
 def piramide_esquerda():
-    pass
+    def piramide_esquerda():
+    
+    n = int(input("Digite o número de linhas da pirâmide: "))
+    
+    
+    for i in range(1, n+1):
+        
+        print('*' * i)
+
+
+piramide_esquerda()
 
 # 22. Faça um Programa que desenhe uma pirâmide alinhada à direita.
 def piramide_direita():
