@@ -206,8 +206,42 @@ caixa_eletronico(346)
 # "Já trabalhou com a vítima?" O programa deve no final emitir uma classificação sobre a participação da pessoa no crime. 
 # Se a pessoa responder positivamente a 2 questões ela deve ser classificada como "Suspeita", 
 # entre 3 e 4 como "Cúmplice" e 5 como "Assassino". Caso contrário, ele será classificado como "Inocente".
-def classificar_participacao():
-    pass
+
+    def classificar_participacao():
+    perguntas = ["Telefonou para a vítima?",
+        "Esteve no local do crime?",
+        "Mora perto da vítima?",
+        "Devia para a vítima?",
+        "Já trabalhou com a vítima?"
+    ]
+
+    respostasPositivas = 0
+
+    for pergunta in perguntas:
+        resposta = input(pergunta + " (sim/não): ").lower()
+        if resposta == "sim":
+            respostasPositivas += 1
+
+    
+    if respostasPositivas == 5:
+        classificacao = "Assassino"
+        
+    elif 3 <= respostasPositivas <= 4:
+        classificacao = "Cúmplice"
+        
+    elif respostasPositivas == 2:
+        classificacao = "Suspeita"
+      
+    else:
+        classificacao = "Inocente"
+        
+
+    print(f"Classificação: {classificacao}")
+
+
+classificar_participacao()
+
+        
 
 # 13. Faça um Programa que calcule o preço da carne em uma promoção com desconto opcional.
 # O Hipermercado Tabajara está com uma promoção de carnes que é imperdível. Confira:
