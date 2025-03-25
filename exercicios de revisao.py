@@ -313,8 +313,24 @@ def potencia():
 potencia()
 
 # 15. Faça um Programa que retorne o menor, maior e a soma de um conjunto de números.
+
+import math
+
 def estatisticas_numeros():
-    pass
+    conjunto = [5,6,8,8]
+    menor = min(conjunto)
+    maior = max(conjunto)
+    soma = sum(conjunto)
+
+    
+    print(f"O menor valor é: {menor}")
+    print(f"O maior valor é: {maior}")
+    print(f"A soma dos valores é: {soma}")
+
+
+estatisticas_numeros()
+    
+    
 
 # 16. Faça uma função que valide se uma nota está entre 0 e 10.
 # Mostre uma mensagem caso o valor seja inválido e continue pedindo até que o usuário informe um valor válido.
