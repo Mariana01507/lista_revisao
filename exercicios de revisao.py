@@ -291,7 +291,26 @@ calcular_preco_carne(tipo_carne, quantidade_kg, pagamento_com_cartao)
 # 14. Faça um programa que peça dois números, base e expoente, calcule e mostre o primeiro número elevado ao segundo número. 
 # Não utilize a função de potência da linguagem.
 def potencia():
-    pass
+    
+    base = int(input("Digite um valor para a base: "))
+    expoente = int(input("Digite um valor para o expoente: "))
+
+    
+    resultado = 1
+
+    
+    for _ in range(abs(expoente)):
+        resultado *= base
+
+    
+    if expoente < 0:
+        resultado = 1 / resultado
+
+    
+    print(f"{base} elevado a {expoente} é {resultado}")
+
+
+potencia()
 
 # 15. Faça um Programa que retorne o menor, maior e a soma de um conjunto de números.
 def estatisticas_numeros():
