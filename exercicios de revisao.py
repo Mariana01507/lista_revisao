@@ -146,7 +146,7 @@ def produto_mais_barato(a,b,c):
     return min(a, b, c)
 
 
-numero1 = 
+numero1 = 2
 numero2 = 86
 numero3 = 78
 
