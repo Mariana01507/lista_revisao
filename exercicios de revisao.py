@@ -478,7 +478,7 @@ def calcular_media_ginastica():
 calcular_media_ginastica()
 
 # 21. Faça um Programa que desenhe uma pirâmide alinhada à esquerda.
-def piramide_esquerda():
+
     def piramide_esquerda():
     
     n = int(input("Digite o número de linhas da pirâmide: "))
@@ -493,11 +493,37 @@ piramide_esquerda()
 
 # 22. Faça um Programa que desenhe uma pirâmide alinhada à direita.
 def piramide_direita():
-    pass
+    
+    
+    n = int(input("Digite o número de linhas da pirâmide: "))
+    
+    
+    for i in range(1, n + 1):
+        
+        print(' ' * (n - i) + '*' * i)
+
+
+piramide_direita()
 
 # 23. Faça um Programa que desenhe duas pirâmides lado a lado.
 def piramides_lado_a_lado():
-    pass
+   
+    
+    n = int(input("Digite o número de linhas das pirâmides: "))
+    
+    
+    for i in range(1, n + 1):
+        
+        piramide_esquerda = '*' * i
+        
+        
+        piramide_direita = ' ' * (n - i) + '*' * i
+        
+        
+        print(piramide_esquerda + '   ' + piramide_direita)
+
+
+piramides_lado_a_lado()
 
 # 24. Faça um Programa que calcule o troco com a menor quantidade de moedas possível.
 def calcular_troco():
