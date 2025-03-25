@@ -527,8 +527,42 @@ piramides_lado_a_lado()
 
 # 24. Faça um Programa que calcule o troco com a menor quantidade de moedas possível.
 def calcular_troco():
-    pass
+    def calcular_troco():
+    
+    valor_pago = float(input("Digite o valor pago: R$"))
+    valor_devido = float(input("Digite o valor devido: R$"))
+    
+    
+    troco = valor_pago - valor_devido
+    
+    
+    moedas = [1.00, 0.50, 0.25, 0.10, 0.05, 0.01]
+    
+    print(f"\nTroco: R${troco:.2f}")
+    
+    
+    for moeda in moedas:
+        quantidade = int(troco // moeda)  
+        if quantidade > 0:
+            print(f"Moeda de R${moeda:.2f}: {quantidade} unidade(s)")
+        troco -= quantidade * moeda  
+
+calcular_troco()
 
 # 25. Faça um Programa que valide um número de cartão de crédito usando o algoritmo de Luhn.
 def validar_cartao():
-    pass
+    def validar_cartao(numero):
+    numero = numero.replace(" ", "")  
+    soma = 0
+    for i in range(len(numero)):
+        digito = int(numero[-(i + 1)])
+        if i % 2 == 1: 
+            digito *= 2
+            if digito > 9:
+                digito -= 9
+        soma += digito
+    return "Número de cartão válido." if soma % 10 == 0 else "Número de cartão inválido."
+
+
+numero_cartao = input("Digite o número do cartão de crédito: ")
+print(validar_cartao(numero_cartao))
