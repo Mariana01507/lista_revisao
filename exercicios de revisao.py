@@ -33,7 +33,7 @@ def fahrenheit_para_celsius(fahrenheit):
 #
 # Peso dentro do limite. Nenhuma multa aplicada.
     def calculo_multa(peso):
-    limite = 50 
+       limite = 50 
     valor_multa = 4.00  
     
     if peso > limite:
@@ -110,22 +110,12 @@ def maior_numero():
          
 
 # 7. Faça uma função que verifique se uma letra é vogal ou consoante.
-def verificar_letra():
-    letra = imput("Digite uma letra:")
-    if letra == a
-        print("A letra é uma vogal")
-    if letra == e
-        print("A letra é uma vogal")
-    if letra == i
-        print("A letra é uma vogal")
-    if letra == o
-        print("A letra é uma vogal")
-    if letra == u
-        print("A letra é uma vogal")
-    
-    else:
-        print("A letra é uma consoante!")
-
+def verificar_letra(letra):
+    if (letra in("a","e","i","o","u")) :
+        return "vogal"
+    else: 
+        return "consoante"
+  
 # 8. Faça um Programa que receba três números e retorne o maior deles.
 def maior_tres_numeros(a, b, c):
     
@@ -141,8 +131,7 @@ maior = maior_numero(numero1, numero2, numero3)
 print(f"O maior número é: {maior}")
 
 # 9. Faça uma função que retorne o menor valor entre três numeros informados.
-def produto_mais_barato(a,b,c):
-    
+def produto_mais_barato(a, b, c):
     return min(a, b, c)
 
 
@@ -150,14 +139,28 @@ numero1 = 2
 numero2 = 86
 numero3 = 78
 
-menor= menor_numero(numero1, numero2, numero3)
+
+menor = produto_mais_barato(numero1, numero2, numero3)
 print(f"O menor número é: {menor}")
 
 # 10. Faça uma funçao que retorne uma saudação com base no turno de estudo.
 # A entrada deverá ser M-matutino ou V-Vespertino ou N- Noturno. 
 # Imprima a mensagem "Bom Dia!", "Boa Tarde!" ou "Boa Noite!" ou "Valor Inválido!", conforme o caso.
 def saudacao_turno():
-    pass
+    
+    if(saudacao) == "M":
+        print ("Bom dia!")
+    elif(saudacao) == "V":
+        print ("Boa Tarde")
+    elif  (saudacao) == "N":
+        print ("Boa Noite")
+    else: 
+        print("Expressão Inválida!")
+
+    saudacao = input("Digite M para matutino, V para vespertino ou N para noturno:")
+    saudacao_turno(saudacao.upper()) 
+    
+    
 
 # 11. Faça uma função para um caixa eletrônico que informe quantas notas de cada valor serão fornecidas
 # ao ser solicitado um saque.
