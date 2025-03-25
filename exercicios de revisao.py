@@ -174,8 +174,28 @@ def saudacao_turno():
 # 1 nota(s) de R$ 5
 # 1 nota(s) de R$ 1
 
-def caixa_eletronico():
-    pass
+def caixa_eletronico(saque):
+    
+    notas = [100, 50, 10, 5, 1]
+    
+    resultado = {}
+    
+    
+    for nota in notas:
+        quantidade = saque // nota  
+        if quantidade > 0:
+            resultado[nota] = quantidade
+            saque -= quantidade * nota 
+            
+    
+    print("Notas fornecidas:")
+    for nota, quantidade in resultado.items():
+        print(f"{quantidade} nota(s) de R$ {nota}")
+        
+
+caixa_eletronico(346)
+
+    
 
 # 12. Desenvolva uma lógica que classifique uma pessoa com base nas respostas sobre um crime.
 # A função deverá receber receba a resposta as seguintes perguntas:
