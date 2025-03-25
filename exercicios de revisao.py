@@ -359,7 +359,21 @@ validar_nota()
 # "Erro: A senha não pode ser igual ao nome de usuário. Tente novamente."
 # "Usuário e senha cadastrados com sucesso!"
 def validar_usuario_senha():
-    pass
+    def validar_usuario_senha():
+    while True:
+        
+        usuario = input("Digite o nome de usuário: ")
+        senha = input("Digite a senha: ")
+        
+        
+        if usuario == senha:
+            print("Erro: A senha não pode ser igual ao nome de usuário. Tente novamente.")
+        else:
+            print("Usuário e senha cadastrados com sucesso!")
+            break  
+
+
+validar_usuario_senha()
 
 # 18. Faça um Programa que calcule a média aritmética de um conjunto de N notas.
 def media_notas():
