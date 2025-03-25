@@ -377,7 +377,17 @@ validar_usuario_senha()
 
 # 18. Faça um Programa que calcule a média aritmética de um conjunto de N notas.
 def media_notas():
-    pass
+    import math
+def media_notas():
+    conjunto = [2,3,4,5,6]
+        
+    soma = sum(conjunto)
+    quantidade = len(conjunto)
+    
+    media =  soma / quantidade
+    print(f"Média: {media}")
+
+media_notas()
 
 # 19. Faça um programa que mostre os n termos da Série a seguir:
 #     S = 1/1 + 2/3 + 3/5 + 4/7 + 5/9 + ... + n/m. 
