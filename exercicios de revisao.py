@@ -437,8 +437,45 @@ calcular_serie()
 # Melhor nota: 9.8
 # Pior nota: 7.0
 # Média: 8.50
+
+import math
+
 def calcular_media_ginastica():
-    pass
+    
+    nome = input("Digite o nome do atleta: ")
+
+    
+    nota1 = float(input("Digite a nota do primeiro jurado: "))
+    nota2 = float(input("Digite a nota do segundo jurado: "))
+    nota3 = float(input("Digite a nota do terceiro jurado: "))
+    nota4 = float(input("Digite a nota do quarto jurado: "))
+    nota5 = float(input("Digite a nota do quinto jurado: "))
+    nota6 = float(input("Digite a nota do sexto jurado: "))
+    nota7 = float(input("Digite a nota do sétimo jurado: "))
+    
+   
+    nota_final = [nota1, nota2, nota3, nota4, nota5, nota6, nota7]
+    
+    
+    menor = min(nota_final)
+    maior = max(nota_final)
+    
+    
+    nota_final.remove(menor)
+    nota_final.remove(maior)
+    
+    
+    media = sum(nota_final) / len(nota_final)
+    
+    
+    print("\nResultado final:")
+    print(f"Atleta: {nome}")
+    print(f"Melhor nota: {maior}")
+    print(f"Pior nota: {menor}")
+    print(f"Média: {media:.2f}")
+
+
+calcular_media_ginastica()
 
 # 21. Faça um Programa que desenhe uma pirâmide alinhada à esquerda.
 def piramide_esquerda():
