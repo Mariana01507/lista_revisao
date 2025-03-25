@@ -157,10 +157,9 @@ def saudacao_turno():
     else: 
         print("Expressão Inválida!")
 
-    saudacao = input("Digite M para matutino, V para vespertino ou N para noturno:")
-    saudacao_turno(saudacao.upper()) 
-    
-    
+
+saudacao = input("Digite M para matutino, V para vespertino ou N para noturno:")
+
 
 # 11. Faça uma função para um caixa eletrônico que informe quantas notas de cada valor serão fornecidas
 # ao ser solicitado um saque.
@@ -178,6 +177,7 @@ def caixa_eletronico(saque):
     
     notas = [100, 50, 10, 5, 1]
     
+    
     resultado = {}
     
     
@@ -185,8 +185,8 @@ def caixa_eletronico(saque):
         quantidade = saque // nota  
         if quantidade > 0:
             resultado[nota] = quantidade
-            saque -= quantidade * nota 
-            
+            saque -= quantidade * nota  
+    
     
     print("Notas fornecidas:")
     for nota, quantidade in resultado.items():
@@ -195,7 +195,7 @@ def caixa_eletronico(saque):
 
 caixa_eletronico(346)
 
-    
+
 
 # 12. Desenvolva uma lógica que classifique uma pessoa com base nas respostas sobre um crime.
 # A função deverá receber receba a resposta as seguintes perguntas:
