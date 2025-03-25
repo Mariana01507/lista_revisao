@@ -339,7 +339,19 @@ estatisticas_numeros()
 # Nota válida: 5.5
 
 def validar_nota():
-    pass
+    while True:
+        
+        nota = float(input("Digite o valor da nota: "))
+        
+        
+        if 0 <= nota <= 10:
+            print(f"Nota válida: {nota}")
+            break  
+        else:
+            print("Erro: A nota deve estar entre 0 e 10. Tente novamente.")
+
+
+validar_nota()
 
 # 17. Faça uma funçao que leia um nome de usuário e a sua senha e não aceite a senha igual ao nome do usuário, 
 # mostrando uma mensagem de erro e voltando a pedir as informações.
