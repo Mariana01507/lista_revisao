@@ -17,7 +17,7 @@ def area_circulo(raio):
 # C = 5 * ((F-32) / 9).
 def fahrenheit_para_celsius(fahrenheit):
     
-    celsius = 5 * ((fahrenheit - 32) / 9)
+    celsius = 5 * ((fahrenheit - 32) / 9
     return celsius
 
 # 4. Faça uma função que calcule a multa por excesso de peso de peixes.
@@ -564,5 +564,5 @@ def validar_cartao():
     return "Número de cartão válido." if soma % 10 == 0 else "Número de cartão inválido."
 
 
-numero_cartao = input("Digite o número do cartão de crédito: ")
-print(validar_cartao(numero_cartao))
+         numero_cartao = input("Digite o número do cartão de crédito: ")
+               print(validar_cartao(numero_cartao))
